@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Almara — the chore battle, finally over</title>
+<meta name="description" content="The sticker chart is dead. Almara replaces the chart that fades and the bribes that creep with something kids actually keep coming back to.">
+<meta property="og:title" content="The sticker chart is dead. Your kid killed it by Thursday.">
+<meta property="og:description" content="Almara replaces the chart that fades and the bribes that creep with something kids actually keep coming back to.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --cream:#fffbf0; --cream2:#fff6e2; --ink:#3a2a0a; --ink-soft:#6b5836;
+    --gold:#c9941c; --gold-bright:#e5ac2c; --sage:#5f7659; --line:#ece0c4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--cream); color:var(--ink); line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:480px;margin:0 auto;padding:0 22px}
+  h1,h2,.kicker{font-family:Georgia,"Times New Roman",serif}
+  .hero{padding:52px 0 30px;text-align:center}
+  .badge{display:inline-block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--sage);font-weight:700;margin-bottom:20px}
+  h1{font-size:33px;line-height:1.18;font-weight:700;letter-spacing:-.01em}
+  .sub{margin-top:18px;font-size:17px;color:var(--ink-soft)}
+  .cta-btn{display:block;width:100%;border:0;border-radius:14px;cursor:pointer;
+    background:linear-gradient(180deg,var(--gold-bright),var(--gold));
+    color:#3a2a0a;font-size:18px;font-weight:800;padding:17px 20px;
+    box-shadow:0 6px 18px rgba(201,148,28,.32);font-family:inherit}
+  .cta-btn:active{transform:translateY(1px)}
+  form{margin-top:26px}
+  .field{width:100%;border:1.5px solid var(--line);border-radius:14px;background:#fff;
+    font-size:17px;padding:16px 18px;margin-bottom:12px;color:var(--ink);font-family:inherit}
+  .field:focus{outline:none;border-color:var(--gold)}
+  .micro{font-size:13.5px;color:var(--ink-soft);text-align:center;margin-top:12px}
+  .trust{font-size:13px;color:var(--sage);text-align:center;margin-top:6px;font-weight:600}
+  .ok{display:none;background:#eef1e6;border:1.5px solid #cdd9c2;border-radius:14px;
+    padding:20px;text-align:center;color:var(--sage);font-weight:700;font-size:16px}
+  section{padding:26px 0;border-top:1px solid var(--line)}
+  .benefit{margin:22px 0}
+  .benefit .lab{font-weight:800;font-size:18px;display:block;margin-bottom:5px}
+  .benefit p{color:var(--ink-soft);font-size:16px}
+  h2{font-size:22px;margin-bottom:6px}
+  ol{list-style:none;counter-reset:s;margin-top:10px}
+  ol li{counter-increment:s;position:relative;padding:14px 0 14px 50px;font-size:16px;color:var(--ink-soft)}
+  ol li::before{content:counter(s);position:absolute;left:0;top:12px;width:34px;height:34px;
+    border-radius:50%;background:var(--sage);color:#fff;font-weight:800;
+    display:flex;align-items:center;justify-content:center;font-family:Georgia,serif}
+  ol li b{color:var(--ink)}
+  .foot{padding:34px 0 56px;text-align:center;color:var(--ink-soft);font-size:13px}
+  .seal{font-family:Georgia,serif;font-size:20px;font-weight:700;color:var(--gold);margin-bottom:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="badge">Almara</span>
+    <h1>The sticker chart is dead.<br>Your kid killed it by Thursday.</h1>
+    <p class="sub">You don't have a discipline problem. You have a system problem. Almara replaces the chart that fades and the bribes that creep with something kids actually keep coming back to.</p>
+
+    <form id="wl">
+      <input class="field" type="email" id="email" name="email" inputmode="email" autocomplete="email" placeholder="Your email" required>
+      <button class="cta-btn" type="submit" id="btn">Get early access</button>
+      <p class="micro">Be first in when Almara opens. We'll email you the moment early spots go live.</p>
+      <p class="trust">Built by parents who were sick of repeating themselves.</p>
+    </form>
+    <div class="ok" id="ok">You're on the list. Watch your inbox — early spots are going to our first families first.</div>
+  </header>
+
+  <section>
+    <div class="benefit">
+      <span class="lab">Stop being the human reminder app.</span>
+      <p>Nagging trains kids to wait for the nag. Almara puts the daily check-in on them, so the question becomes "did I do my stuff?" instead of "is Mom about to yell?"</p>
+    </div>
+    <div class="benefit">
+      <span class="lab">Bribes go up. This holds steady.</span>
+      <p>Five bucks becomes ten becomes "I'm not doing it for less than twenty." With almas, kids earn a steady reward currency and spend it on rewards you set. No escalation, no renegotiating at the kitchen table.</p>
+    </div>
+    <div class="benefit">
+      <span class="lab">A reason to show up tomorrow.</span>
+      <p>A paper chart gives a sticker and dies. In Almara, a gentle avatar grows a little every day they check in, so the streak itself becomes the thing they don't want to break.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <ol>
+      <li><b>Set the stuff and the rewards.</b> Add their chores, routines, and homework, then pick the rewards they can cash almas in for. You stay in control of both.</li>
+      <li><b>Kid checks in, you approve.</b> They mark what they did each day. You give the nod. Their avatar grows and the almas land.</li>
+      <li><b>They spend, you stop nagging.</b> Kids trade almas for the rewards you chose. The motivation lives in the app now, not in your voice.</li>
+    </ol>
+  </section>
+
+  <section style="border-top:0;text-align:center;padding-top:8px">
+    <form id="wl2" style="margin-top:8px">
+      <input class="field" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Your email" required>
+      <button class="cta-btn" type="submit">Get early access</button>
+      <p class="trust" style="margin-top:12px">Early spots limited.</p>
+    </form>
+  </section>
+
+  <footer class="foot">
+    <div class="seal">Almara</div>
+    A calmer way to raise a self-starter.
+  </footer>
+
+</div>
+
+<script>
+  var SUPABASE_URL = "https://xazcxyhvyviybgvqbgjv.supabase.co";
+  var ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhemN4eWh2eXZpeWJndnFiZ2p2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDU3MzksImV4cCI6MjA5NDg4MTczOX0.vQHu3awBMcOHuHC26GeKgJSC_bIcE3m6lLdBnMwdhVE";
+  var VARIANT = "A";
+
+  async function join(email, btn){
+    var res = await fetch(SUPABASE_URL + "/rest/v1/waitlist", {
+      method:"POST",
+      headers:{
+        "apikey":ANON,
+        "Authorization":"Bearer "+ANON,
+        "Content-Type":"application/json",
+        "Prefer":"return=minimal"
+      },
+      body:JSON.stringify({
+        email:email,
+        variant:VARIANT,
+        hero:"sticker-chart",
+        referrer:document.referrer||null,
+        user_agent:navigator.userAgent
+      })
+    });
+    // 201 = new signup; 409 = already on this list (unique index). Both are "success" to the user.
+    return res.ok || res.status === 409;
+  }
+
+  function wire(formId){
+    var f = document.getElementById(formId);
+    if(!f) return;
+    f.addEventListener("submit", async function(e){
+      e.preventDefault();
+      var email = f.querySelector("input[type=email]").value.trim();
+      if(!email) return;
+      var btn = f.querySelector("button");
+      var old = btn.textContent; btn.textContent = "Joining…"; btn.disabled = true;
+      try{
+        var ok = await join(email, btn);
+        if(ok){
+          document.getElementById("wl").style.display="none";
+          document.getElementById("ok").style.display="block";
+          document.getElementById("ok").scrollIntoView({behavior:"smooth",block:"center"});
+        } else { btn.textContent="Try again"; btn.disabled=false; }
+      }catch(err){ btn.textContent="Try again"; btn.disabled=false; }
+      if(formId==="wl2"){ btn.textContent=old; btn.disabled=false; }
+    });
+  }
+  wire("wl"); wire("wl2");
+</script>
+</body>
+</html>
