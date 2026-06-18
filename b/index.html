@@ -61,6 +61,23 @@
   ol li b{color:var(--ink)}
   .foot{padding:34px 0 56px;text-align:center;color:var(--ink-soft);font-size:13px}
   .seal{font-size:20px;font-weight:700;color:var(--gold);margin-bottom:8px}
+  /* phone mockup */
+  .showcase{display:flex;justify-content:center;padding:18px 0 2px}
+  .shotcap{text-align:center;font-size:12.5px;color:var(--sage);font-weight:700;margin-top:12px}
+  .phone{width:236px;border-radius:40px;background:#211a0e;padding:9px;box-shadow:0 22px 48px rgba(58,42,10,.30)}
+  .phone .scr{border-radius:32px;overflow:hidden;position:relative;aspect-ratio:9/19;
+    background:linear-gradient(170deg,#fff6e0 0%,#f3efd9 46%,#eef1e6 100%);padding:26px 16px 18px}
+  .notch{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:54px;height:6px;border-radius:6px;background:rgba(58,42,10,.16)}
+  .bgreet{font-family:Georgia,serif;font-size:16px;font-weight:700;color:var(--ink);text-align:center;margin-top:6px}
+  .bavatar{width:78px;height:78px;border-radius:50%;margin:14px auto 0;
+    background:radial-gradient(circle at 50% 34%,#f3f6ec,#dde6d1);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 18px rgba(95,118,89,.22)}
+  .bsub{font-family:Georgia,serif;font-style:italic;font-size:11px;color:var(--ink-soft);text-align:center;margin-top:12px}
+  .paths-mini{display:flex;justify-content:center;gap:5px;flex-wrap:wrap;margin-top:14px}
+  .paths-mini span{font-size:8.5px;font-weight:800;color:var(--sage);background:#fff;border:1px solid #e2ead7;border-radius:999px;padding:4px 8px}
+  .lchip{display:flex;align-items:center;justify-content:center;gap:7px;background:#fff;border:1px solid #e2ead7;
+    border-radius:13px;padding:11px 12px;margin-top:18px;font-size:10.5px;font-weight:700;color:var(--sage);box-shadow:0 4px 12px rgba(95,118,89,.10)}
+  .lchip .env{display:inline-flex;width:18px;height:18px;border-radius:50%;background:var(--sage);color:#fff;align-items:center;justify-content:center;font-size:10px}
 </style>
 </head>
 <body>
@@ -85,6 +102,26 @@
     </form>
     <div class="ok" id="ok">You're on the list. We'll send one quiet note when Almara is ready for your family, and nothing in between.</div>
   </header>
+
+  <div class="showcase">
+    <div>
+      <div class="phone"><div class="scr">
+        <div class="notch"></div>
+        <div class="bgreet">Good evening, Alex</div>
+        <div class="bavatar">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 22V10" stroke="#5f7659" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 14C12 10.5 8.7 8.2 4.5 8.2C4.5 12.4 7.8 14.6 12 14.6Z" fill="#88a07c"/>
+            <path d="M12 11.4C12 7.9 15.3 5.6 19.5 5.6C19.5 9.8 16.2 12 12 12Z" fill="#5f7659"/>
+          </svg>
+        </div>
+        <div class="bsub">Your story is starting to leaf out.</div>
+        <div class="paths-mini"><span>Body</span><span>Mind</span><span>Heart</span><span>Craft</span><span>World</span></div>
+        <div class="lchip"><span class="env">✉</span> A new letter is waiting</div>
+      </div></div>
+      <p class="shotcap">A peek inside Almara</p>
+    </div>
+  </div>
 
   <section>
     <div class="benefit">

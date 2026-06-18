@@ -53,6 +53,21 @@
   ol li b{color:var(--ink)}
   .foot{padding:34px 0 56px;text-align:center;color:var(--ink-soft);font-size:13px}
   .seal{font-family:Georgia,serif;font-size:20px;font-weight:700;color:var(--gold);margin-bottom:8px}
+  /* phone mockup */
+  .showcase{display:flex;justify-content:center;padding:18px 0 2px}
+  .shotcap{text-align:center;font-size:12.5px;color:var(--sage);font-weight:700;margin-top:12px}
+  .phone{width:236px;border-radius:40px;background:#211a0e;padding:9px;box-shadow:0 22px 48px rgba(58,42,10,.30)}
+  .phone .scr{border-radius:32px;overflow:hidden;position:relative;aspect-ratio:9/19;
+    background:linear-gradient(170deg,#fff6e0 0%,#fdedcf 44%,#f6e7c8 100%);padding:24px 16px 18px}
+  .notch{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:54px;height:6px;border-radius:6px;background:rgba(58,42,10,.16)}
+  .sk{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:800;text-align:center;margin-top:6px}
+  .sh{font-family:Georgia,serif;font-size:18px;font-weight:700;color:var(--ink);text-align:center;margin-top:5px;line-height:1.15}
+  .ssub{font-size:10.5px;color:var(--ink-soft);text-align:center;margin-top:4px}
+  .rcard{background:#fff;border-radius:13px;padding:10px 11px;margin-top:11px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 12px rgba(58,42,10,.08)}
+  .rcard b{font-size:11.5px;color:var(--ink);display:block}
+  .rcard .alm{font-size:10px;color:var(--gold);font-weight:800}
+  .rcard .ask{font-size:9.5px;font-weight:700;color:var(--gold);border:1.4px solid var(--gold);border-radius:999px;padding:5px 9px;white-space:nowrap;margin-left:8px}
+  .rfoot{font-family:Georgia,serif;font-style:italic;font-size:11px;color:var(--gold);text-align:center;margin-top:16px}
 </style>
 </head>
 <body>
@@ -71,6 +86,21 @@
     </form>
     <div class="ok" id="ok">You're on the list. Watch your inbox — early spots are going to our first families first.</div>
   </header>
+
+  <div class="showcase">
+    <div>
+      <div class="phone"><div class="scr">
+        <div class="notch"></div>
+        <div class="sk">Real-life rewards</div>
+        <div class="sh">Effort becomes almas&nbsp;✦</div>
+        <div class="ssub">saved toward wishes a grown-up sets.</div>
+        <div class="rcard"><div><b>A frozen-yogurt treat</b><span class="alm">60&nbsp;✦</span></div><span class="ask">Ask for it</span></div>
+        <div class="rcard"><div><b>Extra story at bedtime</b><span class="alm">50&nbsp;✦</span></div><span class="ask">Ask for it</span></div>
+        <div class="rfoot">Asked for, and enjoyed, for real.</div>
+      </div></div>
+      <p class="shotcap">A peek inside Almara</p>
+    </div>
+  </div>
 
   <section>
     <div class="benefit">
