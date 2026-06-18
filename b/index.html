@@ -1,214 +1,273 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Almara — a calm daily ritual for who your child is becoming</title>
-<meta name="description" content="Two quiet minutes a day. A gentle avatar grows, and your child slowly starts to see who they are becoming. Not a chore chart. A mirror.">
-<meta property="og:title" content="The two minutes at the end of the day that your child will remember.">
-<meta property="og:description" content="A calm daily ritual you share with your child. Not a chore chart. A mirror.">
-<meta property="og:type" content="website">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Almara — a calm place to grow</title>
+<meta name="description" content="A calm daily ritual for who your child is becoming. They check in, a gentle character grows, and they receive warm letters that name the good already growing in them." />
+<meta property="og:title" content="The two minutes at the end of the day your child will remember." />
+<meta property="og:description" content="A calm daily ritual you share with your child. Not a chore chart. A mirror." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#fffbf0; --cream2:#fff6e2; --ink:#3a2a0a; --ink-soft:#6b5836;
-    --gold:#c9941c; --gold-bright:#e5ac2c; --sage:#5f7659; --sage-soft:#eef1e6; --line:#ece0c4;
+    --paper:#F4EAD0; --paper-2:#EFE2C4; --cream:#FBF4E2;
+    --ink:#241A0F; --ink-soft:#5A4A38; --ink-mute:#897662;
+    --gold:#EAB73A; --gold-deep:#C9941C; --sage:#5F7659; --sage-soft:#EEF1E6; --terra:#C77855;
+    --line:rgba(58,42,24,.12);
+    --serif:"Cormorant Garamond",Georgia,serif;
+    --sans:"Inter Tight",-apple-system,BlinkMacSystemFont,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:var(--cream); color:var(--ink); line-height:1.6;
-    -webkit-font-smoothing:antialiased;
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .narrow{max-width:680px}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep)}
+  a{color:inherit}
+
+  .hero{position:relative;min-height:94vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:80px 28px}
+  .hero-bg{position:absolute;inset:0;background:url('../assets/almara-bg.jpg') center/cover no-repeat;transform:scale(1.05)}
+  .hero-scrim{position:absolute;inset:0;background:
+    radial-gradient(ellipse 80% 60% at 50% 46%, rgba(22,15,8,.48), rgba(22,15,8,0) 72%),
+    linear-gradient(180deg, rgba(244,234,208,.30) 0%, rgba(244,234,208,0) 22%, rgba(244,234,208,0) 68%, rgba(244,234,208,.98) 100%)}
+  .hero-inner{position:relative;max-width:780px}
+  .mark{display:inline-flex;align-items:center;gap:14px;color:var(--cream)}
+  .leaf{width:20px;height:31px;background:var(--gold);border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;transform:rotate(-12deg)}
+  .mark .name{font-family:var(--serif);font-weight:600;letter-spacing:.34em;font-size:clamp(26px,5vw,42px);padding-left:16px}
+  .hero h1{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--cream);font-size:clamp(34px,7vw,64px);line-height:1.07;margin:24px 0 18px;text-shadow:0 2px 30px rgba(20,14,6,.5)}
+  .hero p.lede{color:#F4EBD6;font-size:clamp(17px,2.5vw,21px);font-weight:500;max-width:580px;margin:0 auto 32px;text-shadow:0 1px 16px rgba(20,14,6,.6)}
+  .cta{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .btn{font-family:var(--sans);font-weight:700;font-size:17px;border-radius:999px;padding:15px 30px;text-decoration:none;display:inline-block;border:0;cursor:pointer}
+  .btn-gold{background:linear-gradient(180deg,var(--gold),var(--gold-deep));color:#3A2A0A;box-shadow:0 10px 24px rgba(201,148,28,.34)}
+  .btn-ghost{background:rgba(251,244,226,.16);color:var(--cream);border:1.5px solid rgba(251,244,226,.55)}
+  .scroll-hint{position:absolute;bottom:24px;left:0;right:0;text-align:center;color:var(--ink-soft);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+
+  section{padding:80px 0}
+  .center{text-align:center}
+  h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,5vw,48px);line-height:1.08;letter-spacing:-.01em}
+  .sub{color:var(--ink-soft);font-size:clamp(16px,2.2vw,20px);max-width:600px;margin:16px auto 0}
+
+  .pitch{background:#27331F;color:var(--cream);text-align:center}
+  .pitch h2{color:var(--cream)}
+  .pitch .accent{color:var(--gold)}
+  .pitch p{color:#E7E2D2;font-size:clamp(17px,2.4vw,21px);max-width:620px;margin:22px auto 0}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .step{background:var(--cream);border:1px solid var(--line);border-radius:22px;padding:30px 26px;text-align:left}
+  .step .n{font-family:var(--serif);font-weight:600;font-size:28px;color:var(--sage);width:52px;height:52px;border-radius:50%;background:rgba(95,118,89,.14);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .step h3{font-size:21px;font-weight:700;margin-bottom:8px}
+  .step p{color:var(--ink-soft);font-size:16px}
+
+  /* LETTER centerpiece */
+  .letter-sec{background:var(--paper-2)}
+  .letter{max-width:560px;margin:40px auto 0;background:var(--sage-soft);border:1px solid #d7e0cd;border-radius:24px;padding:38px 34px;text-align:left;box-shadow:0 18px 44px rgba(95,118,89,.16)}
+  .letter .lk{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);text-align:center;margin-bottom:20px}
+  .letter p{font-family:var(--serif);font-size:clamp(20px,3.2vw,26px);line-height:1.4;color:#3c4a35;font-style:italic}
+  .letter .sig{display:block;margin-top:20px;font-family:var(--sans);font-style:normal;font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--sage)}
+  .paths-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+  .pathchip{font-size:13px;font-weight:800;letter-spacing:.04em;color:var(--sage);background:var(--cream);border:1px solid #e2ead7;border-radius:999px;padding:10px 18px}
+  .no-line{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.6vw,23px);color:var(--gold-deep)}
+
+  .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px}
+  .art{background:linear-gradient(180deg,var(--cream),#F3E7CC);border:1px solid var(--line);border-radius:22px;padding:24px 16px;text-align:center}
+  .art img{height:110px;width:auto;object-fit:contain;filter:drop-shadow(0 10px 16px rgba(40,30,15,.18))}
+  .art .label{margin-top:14px;font-weight:700;font-size:15px}
+  .art .kind{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute);margin-top:2px}
+
+  .parents{background:#27331F;color:var(--cream)}
+  .parents h2{color:var(--cream)}
+  .pbullets{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px;text-align:left}
+  .pb{display:flex;gap:14px;align-items:flex-start;background:rgba(251,244,226,.06);border:1px solid rgba(251,244,226,.12);border-radius:16px;padding:20px 22px}
+  .pb .tick{color:var(--gold);font-weight:800;font-size:20px;line-height:1.2}
+  .pb p{color:#E7E2D2;font-size:16px}
+  .pb b{color:var(--cream)}
+
+  .waitlist{background:linear-gradient(180deg,var(--paper),var(--paper-2));text-align:center}
+  .wl-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+  .wl-form input[type=email]{font-family:var(--sans);font-size:17px;padding:15px 24px;border-radius:999px;border:1.5px solid var(--line);background:var(--cream);min-width:300px;color:var(--ink)}
+  .wl-form input[type=email]:focus{outline:none;border-color:var(--sage)}
+  .wl-msg{margin-top:18px;color:var(--sage);font-weight:700;min-height:24px}
+  .wl-trust{margin-top:8px;color:var(--ink-mute);font-size:13.5px}
+
+  footer{position:relative;text-align:center;padding:92px 28px 68px;overflow:hidden}
+  .foot-bg{position:absolute;inset:0;background:url('../assets/almara-bg.jpg') center 30%/cover no-repeat}
+  .foot-scrim{position:absolute;inset:0;background:linear-gradient(180deg,var(--paper) 0%,rgba(244,234,208,.55) 40%,rgba(20,14,6,.42) 100%)}
+  .foot-inner{position:relative}
+  footer .name{font-family:var(--serif);font-weight:600;letter-spacing:.32em;font-size:clamp(26px,5vw,40px);color:var(--ink)}
+  footer .grow{font-family:var(--serif);font-style:italic;font-size:clamp(22px,4vw,32px);color:var(--ink);margin-top:8px}
+  footer .meta{margin-top:24px;color:#fff;font-weight:600;letter-spacing:.04em;text-shadow:0 1px 10px rgba(0,0,0,.45)}
+
+  @media (max-width:760px){
+    .steps{grid-template-columns:1fr}
+    .art-grid{grid-template-columns:repeat(2,1fr)}
+    .pbullets{grid-template-columns:1fr}
+    section{padding:60px 0}
+    .letter{padding:30px 24px}
   }
-  .wrap{max-width:480px;margin:0 auto;padding:0 22px}
-  h1,h2,.seal,.letter{font-family:Georgia,"Times New Roman",serif}
-  .hero{padding:54px 0 30px;text-align:center}
-  .badge{display:inline-block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--sage);font-weight:700;margin-bottom:22px}
-  h1{font-size:31px;line-height:1.24;font-weight:700;letter-spacing:-.01em}
-  .sub{margin-top:18px;font-size:17px;color:var(--ink-soft)}
-  .mirror{margin-top:14px;font-size:15px;color:var(--sage);font-weight:700;font-style:italic;font-family:Georgia,serif}
-  .letter{background:var(--sage-soft);border:1px solid #d7e0cd;border-radius:18px;
-    padding:22px 22px;margin:24px 0 2px;text-align:left;font-size:16.5px;color:#43503c;
-    box-shadow:0 8px 22px rgba(95,118,89,.12)}
-  .letter .from{display:block;margin-top:12px;font-size:14px;color:var(--sage);font-style:normal}
-  .cta-btn{display:block;width:100%;border:0;border-radius:14px;cursor:pointer;
-    background:linear-gradient(180deg,var(--gold-bright),var(--gold));
-    color:#3a2a0a;font-size:18px;font-weight:800;padding:17px 20px;
-    box-shadow:0 6px 18px rgba(201,148,28,.30);font-family:inherit}
-  .cta-btn:active{transform:translateY(1px)}
-  form{margin-top:24px}
-  .field{width:100%;border:1.5px solid var(--line);border-radius:14px;background:#fff;
-    font-size:17px;padding:16px 18px;margin-bottom:12px;color:var(--ink);font-family:inherit}
-  .field:focus{outline:none;border-color:var(--sage)}
-  .micro{font-size:13.5px;color:var(--ink-soft);text-align:center;margin-top:12px}
-  .trust{font-size:12.5px;color:var(--sage);text-align:center;margin-top:6px;font-weight:600}
-  .ok{display:none;background:var(--sage-soft);border:1.5px solid #cdd9c2;border-radius:14px;
-    padding:20px;text-align:center;color:var(--sage);font-weight:700;font-size:16px}
-  section{padding:26px 0;border-top:1px solid var(--line)}
-  .benefit{margin:22px 0}
-  .benefit .lab{font-weight:800;font-size:18px;display:block;margin-bottom:5px}
-  .benefit p{color:var(--ink-soft);font-size:16px}
-  .paths{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-  .paths span{font-size:13px;font-weight:700;color:var(--sage);background:var(--sage-soft);
-    border-radius:999px;padding:6px 13px}
-  h2{font-size:22px;margin-bottom:6px}
-  ol{list-style:none;counter-reset:s;margin-top:10px}
-  ol li{counter-increment:s;position:relative;padding:14px 0 14px 50px;font-size:16px;color:var(--ink-soft)}
-  ol li::before{content:counter(s);position:absolute;left:0;top:12px;width:34px;height:34px;
-    border-radius:50%;background:var(--sage);color:#fff;font-weight:800;
-    display:flex;align-items:center;justify-content:center;font-family:Georgia,serif}
-  ol li b{color:var(--ink)}
-  .foot{padding:34px 0 56px;text-align:center;color:var(--ink-soft);font-size:13px}
-  .seal{font-size:20px;font-weight:700;color:var(--gold);margin-bottom:8px}
-  /* phone mockup */
-  .showcase{display:flex;justify-content:center;padding:18px 0 2px}
-  .shotcap{text-align:center;font-size:12.5px;color:var(--sage);font-weight:700;margin-top:12px}
-  .phone{width:236px;border-radius:40px;background:#211a0e;padding:9px;box-shadow:0 22px 48px rgba(58,42,10,.30)}
-  .phone .scr{border-radius:32px;overflow:hidden;position:relative;aspect-ratio:9/19;
-    background:linear-gradient(170deg,#fff6e0 0%,#f3efd9 46%,#eef1e6 100%);padding:26px 16px 18px}
-  .notch{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:54px;height:6px;border-radius:6px;background:rgba(58,42,10,.16)}
-  .bgreet{font-family:Georgia,serif;font-size:16px;font-weight:700;color:var(--ink);text-align:center;margin-top:6px}
-  .bavatar{width:78px;height:78px;border-radius:50%;margin:14px auto 0;
-    background:radial-gradient(circle at 50% 34%,#f3f6ec,#dde6d1);display:flex;align-items:center;justify-content:center;
-    box-shadow:0 8px 18px rgba(95,118,89,.22)}
-  .bsub{font-family:Georgia,serif;font-style:italic;font-size:11px;color:var(--ink-soft);text-align:center;margin-top:12px}
-  .paths-mini{display:flex;justify-content:center;gap:5px;flex-wrap:wrap;margin-top:14px}
-  .paths-mini span{font-size:8.5px;font-weight:800;color:var(--sage);background:#fff;border:1px solid #e2ead7;border-radius:999px;padding:4px 8px}
-  .lchip{display:flex;align-items:center;justify-content:center;gap:7px;background:#fff;border:1px solid #e2ead7;
-    border-radius:13px;padding:11px 12px;margin-top:18px;font-size:10.5px;font-weight:700;color:var(--sage);box-shadow:0 4px 12px rgba(95,118,89,.10)}
-  .lchip .env{display:inline-flex;width:18px;height:18px;border-radius:50%;background:var(--sage);color:#fff;align-items:center;justify-content:center;font-size:10px}
 </style>
 </head>
 <body>
-<div class="wrap">
 
   <header class="hero">
-    <span class="badge">Almara</span>
-    <h1>The two minutes at the end of the day that your child will remember.</h1>
-    <p class="sub">Almara is a calm daily ritual you share with your child. They check in on one small real-life thing, a gentle avatar grows, and slowly your child starts to see who they are becoming.</p>
-    <p class="mirror">Not a chore chart. A mirror.</p>
-
-    <div class="letter">
-      "You stayed gentle with your brother even when you were tired. You didn't have to. You chose it. That is the kind of person you are becoming."
-      <span class="from">— a letter Almara wrote to a child this week</span>
+    <div class="hero-bg"></div>
+    <div class="hero-scrim"></div>
+    <div class="hero-inner">
+      <div class="mark"><span class="leaf"></span><span class="name">ALMARA</span></div>
+      <h1>The two minutes at the end of the day<br>your child will remember.</h1>
+      <p class="lede">A calm daily ritual you share with your child. They check in on one small real-life thing, a gentle character grows, and slowly they start to see who they are becoming.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#waitlist">Join the waitlist</a>
+        <a class="btn btn-ghost" href="#how">How it works</a>
+      </div>
     </div>
-
-    <form id="wl">
-      <input class="field" type="email" id="email" name="email" inputmode="email" autocomplete="email" placeholder="Your email" required>
-      <button class="cta-btn" type="submit" id="btn">Join the waitlist</button>
-      <p class="micro">Be first to bring the ritual home when Almara opens.</p>
-      <p class="trust">No ads. No data selling. No tricks to keep your kid hooked.</p>
-    </form>
-    <div class="ok" id="ok">You're on the list. We'll send one quiet note when Almara is ready for your family, and nothing in between.</div>
+    <div class="scroll-hint">scroll ↓</div>
   </header>
 
-  <div class="showcase">
-    <div>
-      <div class="phone"><div class="scr">
-        <div class="notch"></div>
-        <div class="bgreet">Good evening, Alex</div>
-        <div class="bavatar">
-          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 22V10" stroke="#5f7659" stroke-width="2" stroke-linecap="round"/>
-            <path d="M12 14C12 10.5 8.7 8.2 4.5 8.2C4.5 12.4 7.8 14.6 12 14.6Z" fill="#88a07c"/>
-            <path d="M12 11.4C12 7.9 15.3 5.6 19.5 5.6C19.5 9.8 16.2 12 12 12Z" fill="#5f7659"/>
-          </svg>
+  <section class="pitch">
+    <div class="wrap">
+      <h2>Most kids' apps are built to hold attention.<br><span class="accent">Almara is built to hand it back.</span></h2>
+      <p>No streaks that punish. No confetti. No loot boxes. Just real things, reading, helping, resting, making, adding up day after day. Not a chore chart. A mirror.</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap center">
+      <div class="eyebrow">The daily ritual</div>
+      <h2 style="margin-top:14px">A minute a day. A self slowly taking shape.</h2>
+      <p class="sub">No streaks to protect, no points to chase, no buzzing for attention.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="n">1</div>
+          <h3>Your child checks in</h3>
+          <p>One small thing from their day, on whichever path it touched. It takes about a minute, and nothing is logged without you.</p>
         </div>
-        <div class="bsub">Your story is starting to leaf out.</div>
-        <div class="paths-mini"><span>Body</span><span>Mind</span><span>Heart</span><span>Craft</span><span>World</span></div>
-        <div class="lchip"><span class="env">✉</span> A new letter is waiting</div>
-      </div></div>
-      <p class="shotcap">A peek inside Almara</p>
-    </div>
-  </div>
-
-  <section>
-    <div class="benefit">
-      <span class="lab">A ritual, not a notification.</span>
-      <p>No streaks to protect, no points to chase, no buzzing for attention. Just a quiet minute before bed where your child reflects on their day and you say, together, that it counted.</p>
-    </div>
-    <div class="benefit">
-      <span class="lab">Five paths, one whole kid.</span>
-      <p>As your child checks in, a gentle avatar grows so they see themselves as someone with many kinds of strong, not one number to chase. No scores. No bribes. No leaderboard.</p>
-      <div class="paths"><span>Body</span><span>Mind</span><span>Heart</span><span>Craft</span><span>World</span></div>
-    </div>
-    <div class="benefit">
-      <span class="lab">Letters that tell them who they are.</span>
-      <p>Every so often your child receives a warm, personal letter that reflects their real growth back to them. Not "good job." Something closer to "here is who you are becoming," in words a child can carry.</p>
+        <div class="step">
+          <div class="n">2</div>
+          <h3>You approve, together</h3>
+          <p>A quick tap turns the moment into something shared, and their character grows a little.</p>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <h3>The letters arrive</h3>
+          <p>Now and then, Almara writes your child a warm, personal letter reflecting who they are becoming.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>How it works</h2>
-    <ol>
-      <li><b>Your child checks in.</b> One small thing from their day, on whichever path it touched. It takes about a minute. Nothing is logged without you.</li>
-      <li><b>You approve, together.</b> A quick tap from you turns the moment into something shared, and the avatar grows a little.</li>
-      <li><b>The letters arrive.</b> Over time, Almara writes your child gentle letters that show them, in their own story, how far they have come.</li>
-    </ol>
+  <section class="letter-sec center">
+    <div class="wrap">
+      <div class="eyebrow">A letter for your child</div>
+      <h2 style="margin-top:14px">Words a child can keep.</h2>
+      <p class="sub">Not "good job." Something closer to "here is who you are becoming."</p>
+      <div class="letter">
+        <div class="lk">This week's letter</div>
+        <p>"You stayed gentle with your brother even when you were tired. You didn't have to. You chose it. That is the kind of person you are becoming."
+        <span class="sig">— a letter Almara wrote to a child this week</span></p>
+      </div>
+    </div>
   </section>
 
-  <section style="border-top:0;text-align:center;padding-top:8px">
-    <form id="wl2" style="margin-top:8px">
-      <input class="field" type="email" name="email" inputmode="email" autocomplete="email" placeholder="Your email" required>
-      <button class="cta-btn" type="submit">Join the waitlist</button>
-      <p class="trust" style="margin-top:12px">No app to download yet. One quiet note when it's ready.</p>
-    </form>
+  <section class="center">
+    <div class="wrap">
+      <div class="eyebrow">Five paths, one whole kid</div>
+      <h2 style="margin-top:14px">Many kinds of strong.</h2>
+      <p class="sub">As your child checks in, a gentle character grows across five paths, so they see themselves as someone with many kinds of strong, not one number to chase.</p>
+      <div class="paths-row">
+        <span class="pathchip">Body</span><span class="pathchip">Mind</span><span class="pathchip">Heart</span><span class="pathchip">Craft</span><span class="pathchip">World</span>
+      </div>
+      <div class="no-line">No scores. No bribes. No leaderboard.</div>
+    </div>
   </section>
 
-  <footer class="foot">
-    <div class="seal">Almara</div>
-    A calm place to grow.
+  <section style="background:var(--paper-2)">
+    <div class="wrap center">
+      <div class="eyebrow">Skills &amp; gear</div>
+      <h2 style="margin-top:14px">Earned by growing, never bought.</h2>
+      <p class="sub">Grow a little each day and your child's character earns skills and gear. The growth is its own reward, nothing to buy and nothing to win.</p>
+      <div class="art-grid">
+        <div class="art"><img src="../assets/skill/skill-kind-hands.png" alt="Kind Hands skill"><div class="label">Kind Hands</div><div class="kind">Skill</div></div>
+        <div class="art"><img src="../assets/equip/equip-balanced-traveler-emblem.png" alt="Balanced Traveler emblem"><div class="label">Balanced Traveler</div><div class="kind">Equipment</div></div>
+        <div class="art"><img src="../assets/skill/skill-friend-of-books.png" alt="Friend of Books skill"><div class="label">Friend of Books</div><div class="kind">Skill</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="parents">
+    <div class="wrap center">
+      <div class="eyebrow" style="color:var(--gold)">For the grown-ups</div>
+      <h2 style="margin-top:14px">Calm by design.</h2>
+      <p class="sub" style="color:#E7E2D2">Built to make your job easier, and to never work against your family.</p>
+      <div class="pbullets">
+        <div class="pb"><span class="tick">✓</span><p><b>Fifteen seconds a day.</b> Approve the day's check-in and you're done.</p></div>
+        <div class="pb"><span class="tick">✓</span><p><b>No ads. No loot boxes.</b> No dopamine tricks to keep your kid hooked.</p></div>
+        <div class="pb"><span class="tick">✓</span><p><b>Quiet and slow on purpose.</b> Growth that mirrors the real thing.</p></div>
+        <div class="pb"><span class="tick">✓</span><p><b>No data selling.</b> Your child's inner life is not a product.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="waitlist" class="waitlist">
+    <div class="wrap narrow">
+      <div class="eyebrow">Be the first to know</div>
+      <h2 style="margin-top:14px">Join the waitlist.</h2>
+      <p class="sub">We'll send one quiet note when Almara is ready for your family, and nothing in between.</p>
+      <form id="wl-form" class="wl-form" novalidate>
+        <input type="email" name="email" required placeholder="you@email.com" autocomplete="email" />
+        <button type="submit" class="btn btn-gold">Join the waitlist</button>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
+      </form>
+      <div id="wl-msg" class="wl-msg" role="status" aria-live="polite"></div>
+      <p class="wl-trust">No ads. No data selling. No tricks. One quiet note when it's ready.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-bg"></div>
+    <div class="foot-scrim"></div>
+    <div class="foot-inner">
+      <div class="name">ALMARA</div>
+      <div class="grow">A quiet place to grow.</div>
+      <div class="meta">For families · coming to iPhone</div>
+    </div>
   </footer>
 
-</div>
+  <script>
+    var SUPABASE_URL = "https://xazcxyhvyviybgvqbgjv.supabase.co";
+    var ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhemN4eWh2eXZpeWJndnFiZ2p2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDU3MzksImV4cCI6MjA5NDg4MTczOX0.vQHu3awBMcOHuHC26GeKgJSC_bIcE3m6lLdBnMwdhVE";
+    var VARIANT = "B";
 
-<script>
-  var SUPABASE_URL = "https://xazcxyhvyviybgvqbgjv.supabase.co";
-  var ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhhemN4eWh2eXZpeWJndnFiZ2p2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkzMDU3MzksImV4cCI6MjA5NDg4MTczOX0.vQHu3awBMcOHuHC26GeKgJSC_bIcE3m6lLdBnMwdhVE";
-  var VARIANT = "B";
+    (function () {
+      var form = document.getElementById('wl-form');
+      var msg = document.getElementById('wl-msg');
+      if (!form) return;
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var email = (form.email.value || '').trim();
+        if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+          msg.style.color = '#C77855'; msg.textContent = 'Please enter a valid email.'; return;
+        }
+        if (form._honey.value) return; // bot trap
+        msg.style.color = ''; msg.textContent = 'Adding you…';
+        try {
+          var res = await fetch(SUPABASE_URL + "/rest/v1/waitlist", {
+            method: "POST",
+            headers: { "apikey": ANON, "Authorization": "Bearer " + ANON, "Content-Type": "application/json", "Prefer": "return=minimal" },
+            body: JSON.stringify({ email: email, variant: VARIANT, hero: "two-minutes", referrer: document.referrer || null, user_agent: navigator.userAgent })
+          });
+          if (res.ok || res.status === 409) {
+            msg.style.color = ''; msg.textContent = "You're on the list. We'll send one quiet note when it's ready.";
+            form.reset();
+          } else { msg.style.color = '#C77855'; msg.textContent = 'Something went wrong, please try again.'; }
+        } catch (err) {
+          msg.style.color = '#C77855'; msg.textContent = 'Something went wrong, please try again.';
+        }
+      });
+    })();
+  </script>
 
-  async function join(email){
-    var res = await fetch(SUPABASE_URL + "/rest/v1/waitlist", {
-      method:"POST",
-      headers:{
-        "apikey":ANON,
-        "Authorization":"Bearer "+ANON,
-        "Content-Type":"application/json",
-        "Prefer":"return=minimal"
-      },
-      body:JSON.stringify({
-        email:email,
-        variant:VARIANT,
-        hero:"two-minutes",
-        referrer:document.referrer||null,
-        user_agent:navigator.userAgent
-      })
-    });
-    return res.ok || res.status === 409;
-  }
-
-  function wire(formId){
-    var f = document.getElementById(formId);
-    if(!f) return;
-    f.addEventListener("submit", async function(e){
-      e.preventDefault();
-      var email = f.querySelector("input[type=email]").value.trim();
-      if(!email) return;
-      var btn = f.querySelector("button");
-      var old = btn.textContent; btn.textContent = "Joining…"; btn.disabled = true;
-      try{
-        var ok = await join(email);
-        if(ok){
-          document.getElementById("wl").style.display="none";
-          document.getElementById("ok").style.display="block";
-          document.getElementById("ok").scrollIntoView({behavior:"smooth",block:"center"});
-        } else { btn.textContent="Try again"; btn.disabled=false; }
-      }catch(err){ btn.textContent="Try again"; btn.disabled=false; }
-      if(formId==="wl2"){ btn.textContent=old; btn.disabled=false; }
-    });
-  }
-  wire("wl"); wire("wl2");
-</script>
 </body>
 </html>
