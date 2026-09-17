@@ -1,7 +1,7 @@
 # almara-waitlist
 
-Fake-door A/B demand test for **Almara**. Two landing pages, same app, opposite
-positioning. Run ~$150 of TikTok/Reddit traffic to each and compare waitlist conversion.
+Landing page A/B test for **Almara**. Two waitlist pages for the same app, with
+opposite positioning. Run ~$150 of TikTok/Reddit traffic to each and compare signups.
 
 - **`/a/`** — *control:* chores & rewards that stick ("the sticker chart is dead").
 - **`/b/`** — *the bet:* a calm daily contemplative ritual ("the two minutes...").
